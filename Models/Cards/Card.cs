@@ -1,6 +1,6 @@
 using PokemonCardConverter.Enums;
 
-namespace PokemonCardConverter.Models;
+namespace PokemonCardConverter.Models.Cards;
 
 public abstract class Card
 {
