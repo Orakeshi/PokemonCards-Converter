@@ -1,6 +1,6 @@
 namespace PokemonCardConverter.Enums;
 
-public enum CollectionType
+public enum AcquireType
 {
     Packed,
     Bought,
