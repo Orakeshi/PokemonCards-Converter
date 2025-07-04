@@ -2,11 +2,12 @@ using PokemonCardConverter.Enums;
 
 namespace PokemonCardConverter.Models.Cards;
 
-public abstract class Card
+public class Card
 {
     /* Standard Card Information */
     public required int Number { get; set; }
     public required string Name { get; set; }
+    public required CardType Type { get; set; }
     public StorageType Storage { get; set; }
     
     /* Collected Information */

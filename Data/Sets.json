@@ -1,0 +1,116 @@
+{
+  "scarlet-violet": [
+    {
+      "EN": [
+        {
+          "name": "Scarlet & Violet",
+          "identifier": "SVI",
+          "release-date": "31-03-2023",
+          "total-cards": 198
+        },
+        {
+          "name": "Paldea Evolved",
+          "identifier": "PAL",
+          "release-date": "09-06-2023",
+          "total-cards": 193
+        },
+        {
+          "name": "Obsidian Flames",
+          "identifier": "OBF",
+          "release-date": "11-08-2023",
+          "total-cards": 197
+        },
+        {
+          "name": "151",
+          "identifier": "MEW",
+          "release-date": "22-09-2023",
+          "total-cards": 165
+        },
+        {
+          "name": "Paradox Rift",
+          "identifier": "PAR",
+          "release-date": "03-11-2023",
+          "total-cards": 182
+        },
+        {
+          "name": "Paldean Fates",
+          "identifier": "PAF",
+          "release-date": "26-01-2024",
+          "total-cards": 91
+        },
+        {
+          "name": "Twilight Masquerade",
+          "identifier": "TWM",
+          "release-date": "24-05-2024",
+          "total-cards": 167
+        },
+        {
+          "name": "Stellar Crown",
+          "identifier": "SCR",
+          "release-date": "13-09-2024",
+          "total-cards": 142
+        },
+        {
+          "name": "Surging Sparks",
+          "identifier": "SSP",
+          "release-date": "08-11-2024",
+          "total-cards": 191
+        },
+        {
+          "name": "Primsatic Evolutions",
+          "identifier": "PRE",
+          "release-date": "17-01-2025",
+          "total-cards": 131
+        }
+      ],
+      "JP": [
+        {
+          "name": "シャイニートレジャーex",
+          "identifier": "sv4a",
+          "release-date": "01-12-2023",
+          "total-cards": 190
+        }
+      ]
+    }
+    
+  ],
+  
+  "sword-shield": [
+    {
+      "EN": [
+        {
+          "name": "Pokemon Go",
+          "identifier": "PGO",
+          "release-date": "01-07-2022",
+          "total-cards": 78
+        }
+      ],
+      "JP": [
+
+      ]
+    }
+  ],
+
+  "special": [
+    {
+      "EN": [
+        {
+          "name": "McDonald's Collection 2024",
+          "identifier": "M24",
+          "release-date": "04-12-2024",
+          "total-cards": 15
+        },
+        {
+          "name": "Trick or Trade 2023",
+          "identifier": "TRICKTRADE23",
+          "release-date": "01-09-2023",
+          "total-cards": 30
+        }
+      ],
+      "JP": [
+
+      ]
+    }
+  ]
+    
+}
