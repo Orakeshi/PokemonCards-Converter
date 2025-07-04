@@ -14,7 +14,5 @@ public class Card
     public bool? IsCollected { get; set; }
     public CollectionType? CollectionType { get; set; }
     public DateTime? CollectionDate { get; set; }
-    
-    /* Duplicate Information */
-    public Duplicate? Duplicate { get; set; }
+    public int? DuplicateAmount { get; set; }
 }

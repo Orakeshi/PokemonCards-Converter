@@ -2,8 +2,14 @@ namespace PokemonCardConverter.Enums;
 
 public enum CardType
 {
-    Base,
-    ReverseHolo,
-    EX,
-    AceSpec
+    Common,
+    Uncommon,
+    Rare,
+    DoubleRare,
+    UltraRare,
+    IllustrationRare,
+    SpecialIllustrationRare,
+    HyperRare,
+    ACERare,
+    ReverseHolo
 }
