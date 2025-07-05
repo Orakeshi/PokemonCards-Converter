@@ -11,5 +11,10 @@ public enum CardType
     SpecialIllustrationRare,
     HyperRare,
     ACERare,
+    HoloRare,
+    VRare,
+    RadiantRare,
+    FullArt,
+    SecretRare,
     ReverseHolo
 }

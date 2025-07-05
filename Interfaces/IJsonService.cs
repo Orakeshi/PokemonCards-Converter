@@ -1,6 +1,6 @@
 namespace PokemonCardConverter.Interfaces;
 
-public interface ICsvCardLoader
+public interface IJsonService
 {
     
 }

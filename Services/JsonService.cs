@@ -1,6 +1,6 @@
 namespace PokemonCardConverter.Services;
 
-public class CsvCardLoader
+public class JsonService
 {
     
 }

@@ -11,8 +11,8 @@ public class Card
     public StorageType Storage { get; set; }
     
     /* Collected Information */
-    public bool? IsCollected { get; set; }
-    public CollectionType? CollectionType { get; set; }
+    public bool IsCollected { get; set; }
+    public AcquireType AcquireType { get; set; }
     public DateTime? CollectionDate { get; set; }
     public int? DuplicateAmount { get; set; }
 }
