@@ -15,6 +15,5 @@ public enum CardType
     VRare,
     RadiantRare,
     FullArt,
-    SecretRare,
-    ReverseHolo
+    SecretRare
 }

@@ -42,8 +42,8 @@ public class PokemonCardTransformer
     private Card CreateReverseHoloCard(PokemonCardCsv rawCard)
     {
         Card rhCard = SetupInitialCard(rawCard);
-        rhCard.Type = CardType.ReverseHolo;
-        
+
+        rhCard.IsReverseHolo = true;
         rhCard.IsCollected = rawCard.RHCollected.ToUpper() == "TRUE";
         rhCard.AcquireType = EnumParser.AcquireTypeParser(rawCard.RHAcquireType);
         rhCard.CollectionDate = ParseDate(rawCard.RHCollectionDate);
@@ -60,6 +60,7 @@ public class PokemonCardTransformer
             Name = rawCard.Name,
             Type = EnumParser.CardTypeParser(rawCard.Type),
             Storage = EnumParser.StorageTypeParser(rawCard.Storage),
+            IsReverseHolo = false
         };
     }
     
