@@ -46,7 +46,6 @@ public static class EnumParser
             "Radiant Rare" => CardType.RadiantRare,
             "Full Art" => CardType.FullArt,
             "Secret Rare" => CardType.SecretRare,
-            "Reverse Holo" => CardType.ReverseHolo,
             _ => CardType.Common
         };
     }

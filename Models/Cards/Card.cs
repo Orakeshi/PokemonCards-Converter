@@ -8,6 +8,7 @@ public class Card
     public required int Number { get; set; }
     public required string Name { get; set; }
     public required CardType Type { get; set; }
+    public required bool IsReverseHolo { get; set; }
     public StorageType Storage { get; set; }
     
     /* Collected Information */
