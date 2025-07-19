@@ -3,9 +3,9 @@ using PokemonCardConverter.Interfaces;
 
 namespace PokemonCardConverter.Services;
 
-public class JsonService<T> : IJsonService<T>
+public class JsonService : IJsonService
 {
-    public T Read(string filePath)
+    public T Read<T>(string filePath)
     {
         if (!File.Exists(filePath))
             throw new FileNotFoundException($"JSON file not found at path: {filePath}");

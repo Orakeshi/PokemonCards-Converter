@@ -9,34 +9,43 @@ namespace PokemonCardConverter;
 
 class Program
 {
+    
     static void Main(string[] args)
     {
         IConfigurationRoot config = SetupConfiguration();
-        string? path = config["Paths:DefaultCsvPath"];
+        string? csvPath = config["Paths:DefaultCsvPath"];
+        string? setPath = config["Paths:SetPath"];
         
+        PokemonFileService pokemonFileService = new PokemonFileService(csvPath);
         CsvService<PokemonCardCsv> csvService = new CsvService<PokemonCardCsv>();
-        PokemonCardTransformer transformer = new PokemonCardTransformer();
+        JsonService jsonService = new JsonService();
         
-        // List<PokemonCardCsv> rawCards = csvService.Read($"{path}/scarlet-violet/EN/MEW/Cards.csv", new PokemonCardMap());
-        // List<Card> cards = transformer.TransformCards(rawCards);
+        PokemonCardTransformer cardTransformer = new PokemonCardTransformer();
+        PokemonSetTransformer setTransformer = new PokemonSetTransformer();
         
-        var csvFiles = Directory.GetFiles(path, "Cards.csv", SearchOption.AllDirectories);
+        var rawSets = jsonService.Read<Dictionary<string, List<LanguageSetsDto>>>(setPath);
+        List<Expansion> expansions = setTransformer.TransformExpansions(rawSets);
 
-        foreach (var filePath in csvFiles)
+        var cardFiles = pokemonFileService.GetCardFiles();
+        
+        foreach (var cardFilePath in cardFiles)
         {
-            string relativePath = Path.GetRelativePath(path, filePath);
-            string[] pathParts = relativePath.Split(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
-            string topLevelFolder = pathParts[0];
+            CardFile cardFile = pokemonFileService.CreateCardFile(cardFilePath);
 
-            Console.WriteLine($"File: {filePath}");
-            Console.WriteLine($"Top-level folder: {topLevelFolder}");
-            
-            List<PokemonCardCsv> rawCards = csvService.Read(filePath, new PokemonCardMap());
-            List<Card> cards = transformer.TransformCards(rawCards);
-            TestOuptut(cards);
+            foreach (var expansion in expansions)
+            {
+                if (expansion.Name != cardFile.ExpansionPathName) continue;
+                
+                foreach (var set in expansion.Sets)
+                {
+                    string setIdentifierPathName = cardFile.SetIdentifierPathName;
+                    if (set.Identifier != setIdentifierPathName) continue;
+                    
+                    List<PokemonCardCsv> rawCards = csvService.Read(cardFile.FullPath, new PokemonCardMap());
+                    set.Cards = cardTransformer.TransformCards(rawCards);
+                }
+            }
         }
-
-        //TestOuptut(cards);
     }
 
     /* Temp Method For Development */

@@ -1,6 +1,6 @@
 namespace PokemonCardConverter.Interfaces;
 
-public interface IJsonService<T>
+public interface IJsonService
 {
-    T Read(string filePath);
+    T Read<T>(string filePath);
 }

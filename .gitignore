@@ -16,6 +16,8 @@
 # Mono auto generated files
 mono_crash.*
 
+appsettings.dev.json	
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -427,4 +429,4 @@ Temporary Items
 .apdisk
 
 .idea
-appsettings.dev.json
+
